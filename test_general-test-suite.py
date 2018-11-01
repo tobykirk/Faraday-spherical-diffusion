@@ -10,7 +10,7 @@ Nr = R/dr
 
 [cs,complete,errorflag] = spherical-diffusion(j0,c0,R,dr)
 
-def test_completed():
+def completed():
     """
     Tests whether the simulation was completed with no fatal errors.
     The test passes if the simulation reached the final time step and no error flags were triggered.
@@ -18,7 +18,7 @@ def test_completed():
     assert complete == 1
     assert errorflag == 0
 
-def test_inrange():
+def inrange():
     """
     Tests whether the concentration profile is in the allowed range.
     The allowed range is defined as being between 0 and cmax.
@@ -27,7 +27,7 @@ def test_inrange():
     assert cs.any > 0
     assert cs.any < cmax
 
-def test_continuity():
+def continuity():
     """
     Tests whether or not the concentration profile has any discontinuities.
     A discontinuity is defined here as a finite difference being greater than cmax.
