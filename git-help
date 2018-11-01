@@ -1,0 +1,8 @@
+# To bring the latest changes from the tobykirk/Faraday-spherical-diffusion to your local 
+# master branch
+
+git remote add official https://github.com/tobykirk/Faraday-spherical-diffusion.git
+
+git fetch official 
+
+git merge official/master
