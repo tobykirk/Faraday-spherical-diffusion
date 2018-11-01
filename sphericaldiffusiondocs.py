@@ -14,7 +14,7 @@ def squared(x):
     >>> squared(2)
     4
 
-    >>>squared(-1)
+    >>> squared(-1)
     1
     """
     return x*x
