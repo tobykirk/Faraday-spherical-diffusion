@@ -54,7 +54,8 @@ C_t=np.ones((nT,r.shape[0]))*C_0
 
 for p in range(1,nT-1):
 
-	if C_next_T_step.any()> C_max-tol:
+	if (np.any(C_next_T_step > C_max-tol)):
+		print('Turned j off')
 		j[:]=0
 	C_next_T_step=finite_one_timestep(C_prev_T_step)
 	C_next_T_step=boundary_conditions(C_next_T_step,j[p])
