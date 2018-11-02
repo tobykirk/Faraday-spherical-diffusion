@@ -75,7 +75,7 @@ ax1=fig.add_subplot(111)
 cut=1
 axcolor = 'lightgoldenrodyellow'
 xaxis  = axes([0.2, 0.02, 0.55, 0.02], facecolor=axcolor)
-cut_slider = Page_Slider(xaxis, C_t.shape[0] , 'x-Grid', cut, '%i')
+cut_slider = Page_Slider(xaxis, C_t.shape[0]-1 , 'x-Grid', cut, '%i')
 
 ax1.plot(r,C_t[cut,:],'g^')
 ax1.set_xlabel(r'$r$',fontsize=18)
